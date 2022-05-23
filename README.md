@@ -1,1 +1,3 @@
-printf("HEllo World\n");
+#Embedded OS
+
+## Day 1
