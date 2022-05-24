@@ -1,3 +1,8 @@
-#Embedded OS
+# Embedded OS
 
 ## Day 1
+- Github Setup
+- pushed one program **Hello World**
+
+## Day 2
+- Makefile
