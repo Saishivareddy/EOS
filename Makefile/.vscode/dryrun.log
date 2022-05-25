@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/batch-1/Desktop/Shiva/Makefile'
+make: Leaving directory '/home/batch-1/Desktop/Shiva/Makefile'
+ 
+make: *** No targets.  Stop.
+
