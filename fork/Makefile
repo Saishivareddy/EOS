@@ -1,10 +1,10 @@
 (CC)=gcc
 
-fork: fork.o fork.h
-	$(CC) -o fork fork.o fork.h
+fork: fork.o 
+	$(CC) -o fork fork.o 
 
 fork.o: fork.c 
 	$(CC) -c -o fork.o fork.c 
 
-clear:
+clean:
 	rm -rf *.o fork
