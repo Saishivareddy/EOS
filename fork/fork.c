@@ -1,10 +1,12 @@
-#include "fork.h"
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+
 int main()
 {
     pid_t id;
-    printf("pid is %d\n", getpid());
+    printf("Before fork Process ID is %d and Parent PID is %d\n", getpid(),getppid());
     id = fork();
-    printf("pid is %d\n", getpid());
+    printf("After fork Process ID is %d and Parent PID is %d\n", getpid(),getppid());
     return 0;
-
 }
