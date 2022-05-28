@@ -8,7 +8,7 @@
 - Makefile
 
 ## Day 3
-- Process ID -> *getpid(), geppid()* 
+- Process ID -> *getpid(), getppid()* 
 - Fork
 - System calls -> *open, close, write, read*
 - Static Library and Shared Library
