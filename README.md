@@ -15,3 +15,8 @@
 
 ## Day 4
 -  ***Fork, Zombie, Orphan*** Programs uploaded
+
+## Day 5
+- Pipe
+- FIFO
+- Thread
