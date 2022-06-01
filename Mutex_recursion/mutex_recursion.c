@@ -32,6 +32,8 @@ void *decThread(void *arg)
         count--;
         printf("Dec Thread: %d\n",count);
         pthread_mutex_unlock(&mutex_count);
+        printf("Dec : Unlocking\n");
+
     }
 }
 int main()
