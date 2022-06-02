@@ -80,8 +80,6 @@ dkms.conf
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,c
-
-
 *.pdf
 *.mp3
 *.mp4
