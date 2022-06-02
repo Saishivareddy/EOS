@@ -1,66 +1,54 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
 
+#define MAX_SIZE 8192
+
 int main(int argv[], char *argc[])
 {
     int fdr,fdw;
-    size_t in;
-    unsigned char buff[BUFSIZ];
+    int size;
+    size_t rd,wr;
+    unsigned char buff[MAX_SIZE];
 
-    fdr=open(argc[1],O_RDWR);
+    fdr=open(argc[1],O_RDONLY);
     if(-1==fdr)
     {
         perror("Error opening Source file\n");
         return -1;
     }
-    else
-    {   
-        while(1)
-        {
-            in=read(fdr, buff,sizeof(buff));
-        
-        if (0 ==in)
-        {
-            break;
-        }
-        else
-        {
-            perror("Copying failed\n");
-        }
-        }
-    }
-
-    fdw=open(argc[2], O_CREAT|O_RDWR);
+    fdw=open(argc[2], O_CREAT|O_WRONLY, 0777);
     if(-1==fdr)
     {
         perror("Error opening Destinaton file\n");
-        return -2;
+        return -1;
     }
-    else
+    size =atoi(argc[1]);
+    if (size > MAX_SIZE)
     {
-        while(1)
-        {
-            write(fdw,buff,in);
-            if(-1==fdr)
-            {
-                perror("Error copying into Destinaton file\n");
-                break;
-                return -2;
-            }
-            else if(0 == fdw)
-            {
-                printf("Copied data into %s\n", argc[2]);
-                break;
-            }
-        }
+        perror("File size exceeded\n");
+        return -1;
+    }
+    while(1)
+    {
+        rd=read(fdr, buff,MAX_SIZE);
         
+        if (0 ==rd)
+        {
+            break;
+        }
+        wr=write(fdw,buff,rd); 
 
+        if (0 ==wr)
+        {
+            break;
+        }  
     }
     close(fdr);
     close(fdw);
-    
+    printf("Copied data into %s\n", argc[2]);
     return 0;
 }
