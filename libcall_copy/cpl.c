@@ -31,15 +31,20 @@ int main(int argv[], char *argc[])
     }
     while (1)
     {
+        
         rd=fread(buff,1,MAX_SIZE,fpr);
+        if(rd==EOF)
+        {
+            break;
+        }
         wr=fwrite(buff,1,rd,fpw);
-        if(rd==0)
+        if(wr==0)
         {
             break;
         }
     }
     fclose(fpr);
     fclose(fpw);
-    printf("Copied data into Destination file\n");
+    printf("Copied data into %s\n",argc[2]);
     return 0;
 }
