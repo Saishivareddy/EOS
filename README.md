@@ -8,15 +8,31 @@
 - Makefile
 
 ## Day 3
-- Process ID -> *getpid(), getppid()* 
+- Process ID => *getpid(), getppid()* 
 - Fork
-- System calls -> *open, close, write, read*
+- System calls => *open, close, write, read*
 - Static Library and Shared Library
 
 ## Day 4
--  ***Fork, Zombie, Orphan*** Programs uploaded
+-  Fork, Zombie, Orphan Programs uploaded
 
 ## Day 5
 - Pipe
 - FIFO
 - Thread
+
+## Day 6
+- Thread join
+- Thread Detach
+- Race condition
+## Day 7
+- Mutex
+- Mutex Recursion
+- Mutex => Trylock
+
+## Day 9
+- Copy Utility using library calls
+- Copy Utility using system calls
+
+## Day 10
+- Semaphore
