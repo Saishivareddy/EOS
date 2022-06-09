@@ -41,3 +41,8 @@
 - Signalling Semaphore
 - Counting Semaphore
 - Read Write Locks
+## Day 12
+- exec()
+- Dummy Shell
+- Barrier
+- Conditional variable
