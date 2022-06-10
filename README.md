@@ -41,8 +41,17 @@
 - Signalling Semaphore
 - Counting Semaphore
 - Read Write Locks
+
 ## Day 12
 - exec()
 - Dummy Shell
 - Barrier
 - Conditional variable
+
+## Day 13
+- Shared Memory
+- Message Queue
+
+## Day 14
+- Struct through Shared Memory
+- Struct through Message Queue
