@@ -27,9 +27,11 @@ int main()
     len=sizeof(struct sockaddr_in);
     cfd=accept(sfd,(struct sockaddr *)&caddr,&len);
 
-    write(cfd,"Hello S\n",8);
     read(cfd, buff, 1024);
     printf("client sent: %s\n",buff);
+    
+    write(cfd,"Hello S\n",8);
+    
     close(sfd);
     close(cfd);
 

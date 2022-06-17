@@ -19,11 +19,12 @@ int main()
     saddr.sin_port = htons(5678);
 
     connect(cfd, (const struct sockadrr *)&saddr, sizeof(struct sockaddr_in));
+   
+    write(cfd,"Hello C\n",8);
+
     read(cfd,buff,1024);
     printf("Server sent: %s\n",buff);
 
-    write(cfd,"Hello C\n",8);
-    
     close(cfd);
 
     return 0;
